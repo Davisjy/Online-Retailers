@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTCityViewController">
+            <connections>
+                <outlet property="cover" destination="OzJ-Ke-qaR" id="abX-uE-ClR"/>
+                <outlet property="searchBar" destination="eHD-ZD-pRJ" id="wuD-oM-jhR"/>
+                <outlet property="tableView" destination="pBE-D0-sWE" id="6EA-69-2Ks"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或者拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-ZD-pRJ">
+                    <rect key="frame" x="15" y="15" width="570" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="qMr-0J-QXF"/>
+                        <constraint firstAttribute="height" constant="44" id="tuY-NL-3Qu"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="tMR-zk-YtC"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pBE-D0-sWE">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Y0r-f4-fKG"/>
+                        <outlet property="delegate" destination="-1" id="P2u-sW-GXJ"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-Ke-qaR" userLabel="遮盖">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.71907051282051282" green="0.71907051282051282" blue="0.71907051282051282" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="coverClick:" destination="-1" eventType="touchUpInside" id="IlM-10-mSc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eHD-ZD-pRJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bi4-09-Kof"/>
+                <constraint firstItem="OzJ-Ke-qaR" firstAttribute="top" secondItem="eHD-ZD-pRJ" secondAttribute="bottom" constant="5" id="DpR-EG-1rA"/>
+                <constraint firstItem="eHD-ZD-pRJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="HUL-iF-gVf"/>
+                <constraint firstAttribute="trailing" secondItem="eHD-ZD-pRJ" secondAttribute="trailing" constant="15" id="KC7-IS-08M"/>
+                <constraint firstAttribute="trailing" secondItem="OzJ-Ke-qaR" secondAttribute="trailing" id="NoY-eA-rXr"/>
+                <constraint firstAttribute="trailing" secondItem="pBE-D0-sWE" secondAttribute="trailing" id="Pck-pw-I6z"/>
+                <constraint firstItem="eHD-ZD-pRJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q06-qy-pPc"/>
+                <constraint firstAttribute="bottom" secondItem="pBE-D0-sWE" secondAttribute="bottom" id="TNz-pz-qIM"/>
+                <constraint firstItem="OzJ-Ke-qaR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UdJ-eL-ZSj"/>
+                <constraint firstItem="pBE-D0-sWE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="alw-KR-KOG"/>
+                <constraint firstItem="pBE-D0-sWE" firstAttribute="top" secondItem="eHD-ZD-pRJ" secondAttribute="bottom" constant="5" id="ecb-s3-f3W"/>
+                <constraint firstItem="eHD-ZD-pRJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="hVZ-Ql-zmS"/>
+                <constraint firstAttribute="trailing" secondItem="eHD-ZD-pRJ" secondAttribute="trailing" id="ndg-qz-TBO"/>
+                <constraint firstAttribute="bottom" secondItem="OzJ-Ke-qaR" secondAttribute="bottom" id="trK-GF-B4g"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Bi4-09-Kof"/>
+                    <exclude reference="Q06-qy-pPc"/>
+                    <exclude reference="ndg-qz-TBO"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>

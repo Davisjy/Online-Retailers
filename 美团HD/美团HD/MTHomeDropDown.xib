@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTHomeDropDown">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-ze-CaR" userLabel="主表">
+                    <rect key="frame" x="0.0" y="0.0" width="190" height="360"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="hWH-Jv-7rF"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="p8d-Cz-rvZ"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LOI-bX-vCI" userLabel="从表">
+                    <rect key="frame" x="190" y="0.0" width="190" height="360"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Rkz-V0-SdA"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="q59-T4-i4w"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LOI-bX-vCI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Xl-Wl-cDc"/>
+                <constraint firstAttribute="bottom" secondItem="Y44-ze-CaR" secondAttribute="bottom" id="C9y-Ur-6oL"/>
+                <constraint firstAttribute="width" secondItem="LOI-bX-vCI" secondAttribute="width" multiplier="2" id="Fpc-IF-eb3"/>
+                <constraint firstAttribute="width" secondItem="Y44-ze-CaR" secondAttribute="width" multiplier="2" id="HC8-ek-kRR"/>
+                <constraint firstItem="Y44-ze-CaR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mgu-UU-I7x"/>
+                <constraint firstItem="Y44-ze-CaR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rvf-15-BTp"/>
+                <constraint firstAttribute="bottom" secondItem="LOI-bX-vCI" secondAttribute="bottom" id="WiL-B0-7Hf"/>
+                <constraint firstAttribute="trailing" secondItem="LOI-bX-vCI" secondAttribute="trailing" id="cso-S1-0nH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="Y44-ze-CaR" id="MuH-ZE-35T"/>
+                <outlet property="subTableView" destination="LOI-bX-vCI" id="0EL-TW-GKf"/>
+            </connections>
+            <point key="canvasLocation" x="319" y="375"/>
+        </view>
+    </objects>
+</document>
